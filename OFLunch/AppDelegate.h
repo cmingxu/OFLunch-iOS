@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class Order;
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate >
 
 @property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UINavigationController *vendorNavController;
+@property (retain, nonatomic) UINavigationController *orderNavController;
+@property (retain, nonatomic) UINavigationController *settingNavController;
+@property (retain, nonatomic) UITabBarController *tabController;
+
+@property (retain, nonatomic) Order *order;
 
 @end
